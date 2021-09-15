@@ -1,0 +1,13 @@
+D:\MMW Projects\Encryption\EncrytpionTest1\EncrytpionTest1\bin\Debug\netcoreapp3.1\EncrytpionTest1.exe
+D:\MMW Projects\Encryption\EncrytpionTest1\EncrytpionTest1\bin\Debug\netcoreapp3.1\EncrytpionTest1.deps.json
+D:\MMW Projects\Encryption\EncrytpionTest1\EncrytpionTest1\bin\Debug\netcoreapp3.1\EncrytpionTest1.runtimeconfig.json
+D:\MMW Projects\Encryption\EncrytpionTest1\EncrytpionTest1\bin\Debug\netcoreapp3.1\EncrytpionTest1.runtimeconfig.dev.json
+D:\MMW Projects\Encryption\EncrytpionTest1\EncrytpionTest1\bin\Debug\netcoreapp3.1\EncrytpionTest1.dll
+D:\MMW Projects\Encryption\EncrytpionTest1\EncrytpionTest1\bin\Debug\netcoreapp3.1\EncrytpionTest1.pdb
+D:\MMW Projects\Encryption\EncrytpionTest1\EncrytpionTest1\obj\Debug\netcoreapp3.1\EncrytpionTest1.csproj.AssemblyReference.cache
+D:\MMW Projects\Encryption\EncrytpionTest1\EncrytpionTest1\obj\Debug\netcoreapp3.1\EncrytpionTest1.AssemblyInfoInputs.cache
+D:\MMW Projects\Encryption\EncrytpionTest1\EncrytpionTest1\obj\Debug\netcoreapp3.1\EncrytpionTest1.AssemblyInfo.cs
+D:\MMW Projects\Encryption\EncrytpionTest1\EncrytpionTest1\obj\Debug\netcoreapp3.1\EncrytpionTest1.csproj.CoreCompileInputs.cache
+D:\MMW Projects\Encryption\EncrytpionTest1\EncrytpionTest1\obj\Debug\netcoreapp3.1\EncrytpionTest1.dll
+D:\MMW Projects\Encryption\EncrytpionTest1\EncrytpionTest1\obj\Debug\netcoreapp3.1\EncrytpionTest1.pdb
+D:\MMW Projects\Encryption\EncrytpionTest1\EncrytpionTest1\obj\Debug\netcoreapp3.1\EncrytpionTest1.genruntimeconfig.cache

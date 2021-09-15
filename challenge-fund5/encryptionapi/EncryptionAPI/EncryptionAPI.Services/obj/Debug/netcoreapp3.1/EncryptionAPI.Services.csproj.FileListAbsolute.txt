@@ -1,0 +1,16 @@
+D:\MMW Projects\Encryption\EncryptionAPI\EncryptionAPI\EncryptionAPI.Services\bin\Debug\netcoreapp3.1\EncryptionAPI.Services.deps.json
+D:\MMW Projects\Encryption\EncryptionAPI\EncryptionAPI\EncryptionAPI.Services\bin\Debug\netcoreapp3.1\EncryptionAPI.Services.dll
+D:\MMW Projects\Encryption\EncryptionAPI\EncryptionAPI\EncryptionAPI.Services\bin\Debug\netcoreapp3.1\EncryptionAPI.Services.pdb
+D:\MMW Projects\Encryption\EncryptionAPI\EncryptionAPI\EncryptionAPI.Services\bin\Debug\netcoreapp3.1\EncryptionAPI.Common.dll
+D:\MMW Projects\Encryption\EncryptionAPI\EncryptionAPI\EncryptionAPI.Services\bin\Debug\netcoreapp3.1\EncryptionAPI.Data.dll
+D:\MMW Projects\Encryption\EncryptionAPI\EncryptionAPI\EncryptionAPI.Services\bin\Debug\netcoreapp3.1\EncryptionAPI.Models.dll
+D:\MMW Projects\Encryption\EncryptionAPI\EncryptionAPI\EncryptionAPI.Services\bin\Debug\netcoreapp3.1\EncryptionAPI.Common.pdb
+D:\MMW Projects\Encryption\EncryptionAPI\EncryptionAPI\EncryptionAPI.Services\bin\Debug\netcoreapp3.1\EncryptionAPI.Data.pdb
+D:\MMW Projects\Encryption\EncryptionAPI\EncryptionAPI\EncryptionAPI.Services\bin\Debug\netcoreapp3.1\EncryptionAPI.Models.pdb
+D:\MMW Projects\Encryption\EncryptionAPI\EncryptionAPI\EncryptionAPI.Services\obj\Debug\netcoreapp3.1\EncryptionAPI.Services.csproj.AssemblyReference.cache
+D:\MMW Projects\Encryption\EncryptionAPI\EncryptionAPI\EncryptionAPI.Services\obj\Debug\netcoreapp3.1\EncryptionAPI.Services.AssemblyInfoInputs.cache
+D:\MMW Projects\Encryption\EncryptionAPI\EncryptionAPI\EncryptionAPI.Services\obj\Debug\netcoreapp3.1\EncryptionAPI.Services.AssemblyInfo.cs
+D:\MMW Projects\Encryption\EncryptionAPI\EncryptionAPI\EncryptionAPI.Services\obj\Debug\netcoreapp3.1\EncryptionAPI.Services.csproj.CoreCompileInputs.cache
+D:\MMW Projects\Encryption\EncryptionAPI\EncryptionAPI\EncryptionAPI.Services\obj\Debug\netcoreapp3.1\EncryptionAPI.Services.csproj.CopyComplete
+D:\MMW Projects\Encryption\EncryptionAPI\EncryptionAPI\EncryptionAPI.Services\obj\Debug\netcoreapp3.1\EncryptionAPI.Services.dll
+D:\MMW Projects\Encryption\EncryptionAPI\EncryptionAPI\EncryptionAPI.Services\obj\Debug\netcoreapp3.1\EncryptionAPI.Services.pdb

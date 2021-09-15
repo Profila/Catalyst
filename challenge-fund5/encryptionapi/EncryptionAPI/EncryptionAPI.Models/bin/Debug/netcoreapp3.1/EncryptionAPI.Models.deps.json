@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "EncryptionAPI.Models/1.0.0": {
+        "runtime": {
+          "EncryptionAPI.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EncryptionAPI.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

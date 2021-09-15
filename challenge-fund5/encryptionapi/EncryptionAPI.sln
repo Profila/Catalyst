@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptionAPI.Api", "EncryptionAPI\EncryptionAPI.Api\EncryptionAPI.Api.csproj", "{1FA451C4-C262-466D-B80D-4B9918BB0F2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptionAPI.Common", "EncryptionAPI\EncryptionAPI.Common\EncryptionAPI.Common.csproj", "{2B122C93-D3E5-4AFD-8398-D4F59D2A30E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptionAPI.Data", "EncryptionAPI\EncryptionAPI.Data\EncryptionAPI.Data.csproj", "{E4987BB4-84E2-4C1D-AC9E-3E85A913BB84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptionAPI.Models", "EncryptionAPI\EncryptionAPI.Models\EncryptionAPI.Models.csproj", "{AFD39D27-A2E9-409C-BEF2-6F61CCC47A8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptionAPI.Services", "EncryptionAPI\EncryptionAPI.Services\EncryptionAPI.Services.csproj", "{67B6B345-2D51-4EF0-901B-1E31ED5DBB24}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FA451C4-C262-466D-B80D-4B9918BB0F2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FA451C4-C262-466D-B80D-4B9918BB0F2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FA451C4-C262-466D-B80D-4B9918BB0F2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FA451C4-C262-466D-B80D-4B9918BB0F2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B122C93-D3E5-4AFD-8398-D4F59D2A30E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B122C93-D3E5-4AFD-8398-D4F59D2A30E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B122C93-D3E5-4AFD-8398-D4F59D2A30E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B122C93-D3E5-4AFD-8398-D4F59D2A30E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4987BB4-84E2-4C1D-AC9E-3E85A913BB84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4987BB4-84E2-4C1D-AC9E-3E85A913BB84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4987BB4-84E2-4C1D-AC9E-3E85A913BB84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4987BB4-84E2-4C1D-AC9E-3E85A913BB84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFD39D27-A2E9-409C-BEF2-6F61CCC47A8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFD39D27-A2E9-409C-BEF2-6F61CCC47A8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFD39D27-A2E9-409C-BEF2-6F61CCC47A8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFD39D27-A2E9-409C-BEF2-6F61CCC47A8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67B6B345-2D51-4EF0-901B-1E31ED5DBB24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67B6B345-2D51-4EF0-901B-1E31ED5DBB24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67B6B345-2D51-4EF0-901B-1E31ED5DBB24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67B6B345-2D51-4EF0-901B-1E31ED5DBB24}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {159A041F-2EBC-4EBB-BDEC-63AFDD34DD60}
+	EndGlobalSection
+EndGlobal
