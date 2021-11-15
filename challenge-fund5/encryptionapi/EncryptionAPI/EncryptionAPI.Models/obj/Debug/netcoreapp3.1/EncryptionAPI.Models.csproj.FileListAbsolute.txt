@@ -1,9 +1,0 @@
-D:\MMW Projects\Encryption\EncryptionAPI\EncryptionAPI\EncryptionAPI.Models\bin\Debug\netcoreapp3.1\EncryptionAPI.Models.deps.json
-D:\MMW Projects\Encryption\EncryptionAPI\EncryptionAPI\EncryptionAPI.Models\bin\Debug\netcoreapp3.1\EncryptionAPI.Models.dll
-D:\MMW Projects\Encryption\EncryptionAPI\EncryptionAPI\EncryptionAPI.Models\bin\Debug\netcoreapp3.1\EncryptionAPI.Models.pdb
-D:\MMW Projects\Encryption\EncryptionAPI\EncryptionAPI\EncryptionAPI.Models\obj\Debug\netcoreapp3.1\EncryptionAPI.Models.csproj.AssemblyReference.cache
-D:\MMW Projects\Encryption\EncryptionAPI\EncryptionAPI\EncryptionAPI.Models\obj\Debug\netcoreapp3.1\EncryptionAPI.Models.AssemblyInfoInputs.cache
-D:\MMW Projects\Encryption\EncryptionAPI\EncryptionAPI\EncryptionAPI.Models\obj\Debug\netcoreapp3.1\EncryptionAPI.Models.AssemblyInfo.cs
-D:\MMW Projects\Encryption\EncryptionAPI\EncryptionAPI\EncryptionAPI.Models\obj\Debug\netcoreapp3.1\EncryptionAPI.Models.csproj.CoreCompileInputs.cache
-D:\MMW Projects\Encryption\EncryptionAPI\EncryptionAPI\EncryptionAPI.Models\obj\Debug\netcoreapp3.1\EncryptionAPI.Models.dll
-D:\MMW Projects\Encryption\EncryptionAPI\EncryptionAPI\EncryptionAPI.Models\obj\Debug\netcoreapp3.1\EncryptionAPI.Models.pdb

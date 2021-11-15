@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.16" />
+    <PackageReference Include="MongoDB.Driver" Version="2.13.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\RightAsserion.Cardano.Service\RightAsserion.Cardano.Service.csproj" />
+    <ProjectReference Include="..\RightAssertion.API.Common\RightAssertion.API.Common.csproj" />
+    <ProjectReference Include="..\RightAssertion.API.Data\RightAssertion.API.Data.csproj" />
+    <ProjectReference Include="..\RightAssertion.API.Models\RightAssertion.API.Models.csproj" />
+    <ProjectReference Include="..\RightAssertion.API.Services\RightAssertion.API.Services.csproj" />
+  </ItemGroup>
+
+
+</Project>

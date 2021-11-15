@@ -11,6 +11,8 @@ Has the API service which delivers endpoint for the en-/decryption.
 
 Is a simple console application to check if en-/decryption works.
 
+## Metatdata Plublicapi
+Contains to code for adding metadat to the Cardano Blockchain. This part of the code was decoupled form our core application and contains only the part regarding fund5 metadata challenge.
 ## General idea
 
 General idea is that we encypt the metadata with synchronous encryption, which will be added to the blockchain.
