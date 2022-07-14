@@ -1,0 +1,8 @@
+cradle:
+  cabal:
+    - path: "./src"
+      component: "lib:profila-offchain"
+    - path: "./src"
+      component: "lib:script-deserialize"
+    - path: "./test"
+      component: "test:profila-offchain-test"
