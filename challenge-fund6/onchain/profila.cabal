@@ -99,6 +99,7 @@ common common-lang
 
 library
   import:          common-lang
+
   exposed-modules:
     Profila
     Types

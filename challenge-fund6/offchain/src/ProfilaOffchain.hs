@@ -7,36 +7,36 @@ import Data.Map qualified as Map (keys)
 import Data.Text (Text)
 import Data.Void (Void)
 import GHC.Generics (Generic)
-import Ledger (
-  MintingPolicy (MintingPolicy),
-  applyArguments,
-  scriptCurrencySymbol,
- )
+import Ledger
+  ( MintingPolicy (MintingPolicy),
+    applyArguments,
+    scriptCurrencySymbol,
+  )
 import Ledger.Address (PaymentPubKeyHash, pubKeyHashAddress)
 import Ledger.Constraints qualified as Constraints
 import Ledger.Scripts (Script)
 import Ledger.Tx (getCardanoTxId)
 import Ledger.Value qualified as Value
-import Plutus.Contract (
-  AsContractError,
-  Contract,
-  Endpoint,
-  awaitPromise,
-  awaitTxConfirmed,
-  endpoint,
-  logError,
-  logInfo,
-  ownPaymentPubKeyHash,
-  submitTxConstraintsWith,
-  utxosAt,
- )
+import Plutus.Contract
+  ( AsContractError,
+    Contract,
+    Endpoint,
+    awaitPromise,
+    awaitTxConfirmed,
+    endpoint,
+    logError,
+    logInfo,
+    ownPaymentPubKeyHash,
+    submitTxConstraintsWith,
+    utxosAt,
+  )
 import Plutus.V1.Ledger.Ada (adaValueOf)
 import PlutusTx qualified
 
 data FeedbackParams = FeedbackParams
-  { mintingPolicyScript :: !Script
-  , tokenName :: !Value.TokenName
-  , beneficiary :: !PaymentPubKeyHash
+  { mintingPolicyScript :: !Script,
+    tokenName :: !Value.TokenName,
+    beneficiary :: !PaymentPubKeyHash
   }
   deriving stock (Generic)
   deriving anyclass (ToJSON, FromJSON)

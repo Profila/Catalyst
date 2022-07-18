@@ -11,10 +11,23 @@
     plutarch.url = "github:Plutonomicon/plutarch";
     plutarch.inputs.haskell-nix.follows = "plutip/haskell-nix";
     plutarch.inputs.nixpkgs.follows = "plutip/nixpkgs";
+
+    cardano-transaction-lib = {
+      type = "github";
+      owner = "Plutonomicon";
+      repo = "cardano-transaction-lib";
+      # Should match the same revision as the one in `packages.dhall`
+      rev = "9954427f28d949743da5b36c801facd13fb0426d";
+    };
+
+    easy-purescript-nix = {
+      url = "github:justinwoo/easy-purescript-nix";
+      flake = false;
+    };
   };
 
 
-  outputs = inputs@{ self, nixpkgs, haskell-nix, plutarch, plutip, ... }:
+  outputs = inputs@{ self, nixpkgs, haskell-nix, plutarch, plutip, cardano-transaction-lib, ... }:
     let
       # GENERAL
       supportedSystems = with nixpkgs.lib.systems.supported; tier1 ++ tier2 ++ tier3;
@@ -26,6 +39,11 @@
         inherit (haskell-nix) config;
       };
       nixpkgsFor' = system: import nixpkgs { inherit system; };
+
+      ctlNixpkgsFor = system: import nixpkgs {
+        inherit system;
+        overlays = [ cardano-transaction-lib.overlay.${system} ];
+      };
 
       formatCheckFor = system:
         let
@@ -52,6 +70,8 @@
       ;
 
       deferPluginErrors = true;
+
+      pursVersion = "purs-0_14_5";
 
       # ONCHAIN / Plutarch
 
@@ -158,6 +178,27 @@
           in
           project;
       };
+
+      # CTL / Web
+      psProjectFor = system:
+        let
+          pkgs = ctlNixpkgsFor system;
+          pkgs' = nixpkgsFor' system;
+          src = ./browser;
+          nodejs = pkgs.nodejs-14_x;
+          easy-ps = import inputs.easy-purescript-nix { inherit pkgs'; };
+          spagoPkgs = import (src + /spago-packages.nix) { inherit pkgs'; };
+          nodePkgs =
+            import (src + /node2nix.nix) { inherit pkgs system nodejs; };
+          purs = easy-ps.${pursVersion};
+        in
+        pkgs.purescriptProject {
+          inherit pkgs src spagoPkgs purs easy-ps system;
+          projectName = "profila";
+          shell = {
+            packages = [ pkgs'.fd ];
+          };
+        };
     in
     {
       inherit nixpkgsFor;
@@ -172,10 +213,24 @@
         flake = perSystem (system: (offchain.projectFor system).flake { });
       };
 
+      browser = perSystem psProjectFor;
+
       packages = perSystem (system:
         self.onchain.flake.${system}.packages
         // self.offchain.flake.${system}.packages
+        // {
+          profila-build-web = (psProjectFor system).buildPursProject {
+            sources = [ "src" ];
+          };
+          profila-bundle-web = (psProjectFor system).bundlePursProject {
+            sources = [ "src" ];
+            main = "Main";
+          };
+        }
       );
+      apps = perSystem (system: {
+        ctl-runtime = (ctlNixpkgsFor system).launchCtlRuntime { };
+      });
       checks = perSystem (system:
         self.onchain.flake.${system}.checks
         // self.offchain.flake.${system}.checks
@@ -202,8 +257,10 @@
       devShells = perSystem (system: {
         onchain = self.onchain.flake.${system}.devShell;
         offchain = self.offchain.flake.${system}.devShell;
+        browser = self.browser.${system}.devShell;
       });
+
+      herculesCI.ciSystems = [ "x86_64-linux" ];
     };
 }
-
 

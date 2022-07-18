@@ -3,18 +3,17 @@ module Main (main) where
 import Cardano.Prelude (Text)
 import Data.Default (Default (def))
 import Ledger (PaymentPubKeyHash, Script)
-import Paths_profila_offchain (getDataFileName)
 import Plutus.Contract (AsContractError, Contract)
 import Plutus.PAB.Effects.Contract.Builtin (EmptySchema)
-import ProfilaOffchain (
-  FeedbackParams (
-    FeedbackParams,
-    beneficiary,
-    mintingPolicyScript,
-    tokenName
-  ),
-  mintFeedbackNFT,
- )
+import ProfilaOffchain
+  ( FeedbackParams
+      ( FeedbackParams,
+        beneficiary,
+        mintingPolicyScript,
+        tokenName
+      ),
+    mintFeedbackNFT,
+  )
 import Scripts.V1.Deserialize (readPlutusScript)
 import Test.Plutip.Contract (assertExecution, initAda, withContract)
 import Test.Plutip.LocalCluster (withConfiguredCluster)
@@ -45,18 +44,13 @@ mkContract pScript (pkh : _) = mintFeedbackNFT fp
   where
     fp =
       FeedbackParams
-        { mintingPolicyScript = pScript
-        , tokenName = "Test"
-        , beneficiary = pkh
+        { mintingPolicyScript = pScript,
+          tokenName = "Test",
+          beneficiary = pkh
         }
 mkContract _ _ = error "This shouldn't happen"
 
 main :: IO ()
 main = do
-  scrPath <- scriptPath
-  print scrPath
-  pScript <- readPlutusScript scrPath
+  pScript <- readPlutusScript "../scripts/policyScript.plutus"
   Test.Tasty.defaultMain (tests pScript)
-
-scriptPath :: IO String
-scriptPath = getDataFileName "scripts/policyScript.plutus"

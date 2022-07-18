@@ -5,7 +5,6 @@ import Scripts.V1.Serialize (writePlutusScript)
 
 main :: IO ()
 main = do
-  writePlutusScript
-    "policy script"
-    "../offchain/scripts/policyScript.plutus"
+  writePlutusScript 
+    "policy script" "../scripts/policyScript.plutus"
     policyScript
