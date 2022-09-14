@@ -1,27 +1,19 @@
 {-
 Welcome to your new Dhall package-set!
-
 Below are instructions for how to edit this file for most use
 cases, so that you don't need to know Dhall to use it.
-
 ## Warning: Don't Move This Top-Level Comment!
-
 Due to how `dhall format` currently works, this comment's
 instructions cannot appear near corresponding sections below
 because `dhall format` will delete the comment. However,
 it will not delete a top-level comment like this one.
-
 ## Use Cases
-
 Most will want to do one or both of these options:
 1. Override/Patch a package's dependency
 2. Add a package not already in the default package set
-
 This file will continue to work whether you use one or both options.
 Instructions for each option are explained below.
-
 ### Overriding/Patching a package
-
 Purpose:
 - Change a package's dependency to a newer/older release than the
     default package set's release
@@ -29,7 +21,6 @@ Purpose:
     include new API, changed API, removed API by
     using your custom git repo of the library rather than
     the package set's repo
-
 Syntax:
 where `entityName` is one of the following:
 - dependencies
@@ -40,22 +31,17 @@ let upstream = --
 in  upstream
   with packageName.entityName = "new value"
 -------------------------------
-
 Example:
 -------------------------------
 let upstream = --
 in  upstream
   with halogen.version = "master"
   with halogen.repo = "https://example.com/path/to/git/repo.git"
-
   with halogen-vdom.version = "v4.0.0"
 -------------------------------
-
 ### Additions
-
 Purpose:
 - Add packages that aren't already included in the default package set
-
 Syntax:
 where `<version>` is:
 - a tag (i.e. "v4.0.0")
@@ -75,7 +61,6 @@ in  upstream
         "<version>"
     }
 -------------------------------
-
 Example:
 -------------------------------
 let upstream = --
@@ -150,7 +135,7 @@ let additions =
           , "untagged-union"
           ]
         , repo = "https://github.com/mlabs-haskell/purescript-aeson.git"
-        , version = "69bd18c4a9cffdebc45c55d2448740721a91854c"
+        , version = "8e9d42980e824450c18c397295573160d1ce8424"
         }
       , aeson-helpers =
         { dependencies =
@@ -267,12 +252,26 @@ let additions =
         , repo = "https://github.com/juspay/medea-ps.git"
         , version = "8b215851959aa8bbf33e6708df6bd683c89d1a5a"
         }
+      , purescript-toppokki =
+        { dependencies =
+          [ "prelude"
+          , "record"
+          , "functions"
+          , "node-http"
+          , "aff-promise"
+          , "node-buffer"
+          , "node-fs-aff"
+          ]
+        , repo = "https://github.com/firefrorefiddle/purescript-toppokki"
+        , version = "6983e07bf0aa55ab779bcef12df3df339a2b5bd9"
+        }
       , cardano-transaction-lib =
         { dependencies =
           [ "aeson"
           , "aeson-helpers"
           , "aff"
           , "aff-promise"
+          , "aff-retry"
           , "affjax"
           , "arraybuffer-types"
           , "arrays"
@@ -281,7 +280,9 @@ let additions =
           , "checked-exceptions"
           , "console"
           , "const"
+          , "contravariant"
           , "control"
+          , "datetime"
           , "debug"
           , "effect"
           , "either"
@@ -289,13 +290,16 @@ let additions =
           , "enums"
           , "exceptions"
           , "foldable-traversable"
+          , "foreign"
           , "foreign-object"
+          , "heterogeneous"
           , "http-methods"
           , "identity"
           , "integers"
           , "js-date"
           , "lattice"
           , "lists"
+          , "math"
           , "maybe"
           , "medea"
           , "media-types"
@@ -303,25 +307,36 @@ let additions =
           , "mote"
           , "newtype"
           , "node-buffer"
+          , "node-child-process"
           , "node-fs"
           , "node-fs-aff"
           , "node-path"
+          , "node-process"
+          , "node-streams"
           , "nonempty"
+          , "now"
+          , "numbers"
+          , "optparse"
           , "ordered-collections"
           , "orders"
+          , "parallel"
           , "partial"
+          , "posix-types"
           , "prelude"
           , "profunctor"
           , "profunctor-lenses"
+          , "purescript-toppokki"
           , "quickcheck"
-          , "quickcheck-laws"
           , "quickcheck-combinators"
+          , "quickcheck-laws"
           , "rationals"
           , "record"
           , "refs"
+          , "safe-coerce"
           , "spec"
           , "spec-quickcheck"
           , "strings"
+          , "stringutils"
           , "tailrec"
           , "text-encoding"
           , "these"
@@ -335,8 +350,8 @@ let additions =
           , "untagged-union"
           , "variant"
           ]
-        , repo = "https://github.com/Plutonomicon/cardano-transaction-lib.git"
-        , version = "9954427f28d949743da5b36c801facd13fb0426d"
+        , repo = "https://github.com/Plutonomicon/cardano-transaction-lib"
+        , version = "master"
         }
       }
 

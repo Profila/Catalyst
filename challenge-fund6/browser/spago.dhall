@@ -10,7 +10,9 @@ You can edit this file as you like.
   , "bigints"
   , "cardano-transaction-lib"
   , "lists"
+  , "monad-logger"
   , "ordered-collections"
+  , "prelude"
   , "transformers"
   ]
 , packages = ./packages.dhall
