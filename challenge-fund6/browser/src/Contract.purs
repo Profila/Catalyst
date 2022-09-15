@@ -14,7 +14,6 @@ import Contract.Utxos (utxosAt)
 import Contract.Value (lovelaceValueOf, scriptCurrencySymbol)
 import Contract.Value as Value
 import Control.Monad.Error.Class (liftMaybe)
-import Data.Aeson (encode, toJSON)
 import Data.BigInt as BigInt
 import Data.List (List(..), (:))
 import Data.Map.Internal as Map
