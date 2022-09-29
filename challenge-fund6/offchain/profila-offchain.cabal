@@ -1,0 +1,135 @@
+cabal-version:      3.0
+name:               profila-offchain
+version:            0.1
+synopsis:           TODO
+description:        TODO
+homepage:           https://github.com/mlabs-haskell/profila
+bug-reports:        https://github.com/mlabs-haskell/profila
+license:
+license-file:
+author:             MLabs
+maintainer:         TODO
+copyright:          TODO
+category:           TODO
+build-type:         Simple
+tested-with:        GHC ==8.10.7
+extra-source-files: README.md
+
+source-repository head
+  type:     git
+  location: https://github.com/mlabs-haskell/profila
+
+-- Common sections
+
+common common-lang
+  ghc-options:
+    -Wall -Wcompat -Wincomplete-uni-patterns -Wno-unused-do-bind
+    -Wno-partial-type-signatures -Wmissing-export-lists
+    -Wincomplete-record-updates -Wmissing-deriving-strategies
+    -Wno-name-shadowing -Wunused-foralls -fprint-explicit-foralls
+    -fprint-explicit-kinds -fwarn-missing-import-lists -Werror
+
+  build-depends:      base
+  default-extensions:
+    NoStarIsType
+    BangPatterns
+    BinaryLiterals
+    ConstrainedClassMethods
+    ConstraintKinds
+    DataKinds
+    DeriveAnyClass
+    DeriveDataTypeable
+    DeriveFoldable
+    DeriveFunctor
+    DeriveGeneric
+    DeriveLift
+    DeriveTraversable
+    DerivingStrategies
+    DerivingVia
+    DoAndIfThenElse
+    EmptyCase
+    EmptyDataDecls
+    EmptyDataDeriving
+    ExistentialQuantification
+    ExplicitForAll
+    FlexibleContexts
+    FlexibleInstances
+    ForeignFunctionInterface
+    GADTSyntax
+    GeneralisedNewtypeDeriving
+    HexFloatLiterals
+    ImplicitPrelude
+    ImportQualifiedPost
+    InstanceSigs
+    KindSignatures
+    LambdaCase
+    MonomorphismRestriction
+    MultiParamTypeClasses
+    NamedFieldPuns
+    NamedWildCards
+    NumericUnderscores
+    OverloadedStrings
+    PartialTypeSignatures
+    PatternGuards
+    PolyKinds
+    PostfixOperators
+    RankNTypes
+    RelaxedPolyRec
+    ScopedTypeVariables
+    StandaloneDeriving
+    StandaloneKindSignatures
+    TupleSections
+    TypeApplications
+    TypeFamilies
+    TypeOperators
+    TypeSynonymInstances
+    ViewPatterns
+
+  default-language:   Haskell2010
+
+library script-deserialize
+  default-language: Haskell2010
+  build-depends:
+    , base
+    , bytestring
+    , cardano-api
+    , plutus-ledger-api
+    , serialise
+
+  exposed-modules:  Scripts.V1.Deserialize
+  hs-source-dirs:   src
+
+library
+  import:          common-lang
+  exposed-modules: ProfilaOffchain
+  build-depends:   
+    , plutip
+    , aeson                           >=1.5.6.0
+    , plutus-contract                 >=0.1.0.0
+    , containers                      >=0.6.5.1
+    , text                            >=1.2.4.1
+    , plutus-ledger                   >=0.1.0.0
+    , plutus-ledger-api               >=0.1.0.0
+    , plutus-tx                       >=0.1.0.0
+    , plutus-ledger-constraints       >=0.1.0.0
+  hs-source-dirs:  src
+
+test-suite profila-offchain-test
+  import:         common-lang
+  type:           exitcode-stdio-1.0
+  main-is:        Spec.hs
+  build-depends:
+    , data-default        >=0.7.1.1
+    , cardano-prelude     >=0.1.0.0
+    , containers          >=0.6.5.1
+    , plutip
+    , plutus-contract     >=0.1.0.0
+    , plutus-ledger       >=0.1.0.0
+    , plutus-pab          >=0.1.0.0
+    , profila-offchain
+    , script-deserialize
+    , tasty               >=1.4
+    , text                >=1.2.4.1
+
+  ghc-options:    -Wall -threaded -rtsopts
+  hs-source-dirs: test

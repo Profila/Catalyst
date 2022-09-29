@@ -1,0 +1,161 @@
+cabal-version:      3.0
+name:               profila
+version:            0.1
+synopsis:           TODO
+description:        TODO
+homepage:           https://github.com/mlabs-haskell/profila
+bug-reports:        https://github.com/mlabs-haskell/profila
+license:
+license-file:
+author:             MLabs
+maintainer:         TODO
+copyright:          TODO
+category:           TODO
+build-type:         Simple
+tested-with:        GHC ==9.2.1
+extra-source-files: README.md
+
+source-repository head
+  type:     git
+  location: https://github.com/mlabs-haskell/profila
+
+-- Common sections
+
+common common-lang
+  ghc-options:
+    -Wall -Wcompat -Wincomplete-uni-patterns -Wno-unused-do-bind
+    -Wno-partial-type-signatures -Wmissing-export-lists
+    -Wincomplete-record-updates -Wmissing-deriving-strategies
+    -Wno-name-shadowing -Wunused-foralls -fprint-explicit-foralls
+    -fprint-explicit-kinds -fwarn-missing-import-lists -Werror
+
+  mixins:
+    base hiding (Prelude),
+    pprelude (PPrelude as Prelude)
+
+  build-depends:
+    , base      >=4.14
+    , pprelude
+
+  default-extensions:
+    NoStarIsType
+    BangPatterns
+    BinaryLiterals
+    ConstrainedClassMethods
+    ConstraintKinds
+    DataKinds
+    DeriveAnyClass
+    DeriveDataTypeable
+    DeriveFoldable
+    DeriveFunctor
+    DeriveGeneric
+    DeriveLift
+    DeriveTraversable
+    DerivingStrategies
+    DerivingVia
+    DoAndIfThenElse
+    EmptyCase
+    EmptyDataDecls
+    EmptyDataDeriving
+    ExistentialQuantification
+    ExplicitForAll
+    FlexibleContexts
+    FlexibleInstances
+    ForeignFunctionInterface
+    GADTSyntax
+    GeneralisedNewtypeDeriving
+    HexFloatLiterals
+    ImplicitPrelude
+    ImportQualifiedPost
+    InstanceSigs
+    KindSignatures
+    LambdaCase
+    MonomorphismRestriction
+    MultiParamTypeClasses
+    NamedFieldPuns
+    NamedWildCards
+    NumericUnderscores
+    OverloadedStrings
+    PartialTypeSignatures
+    PatternGuards
+    PolyKinds
+    PostfixOperators
+    RankNTypes
+    RelaxedPolyRec
+    ScopedTypeVariables
+    StandaloneDeriving
+    StandaloneKindSignatures
+    TraditionalRecordSyntax
+    TupleSections
+    TypeApplications
+    TypeFamilies
+    TypeOperators
+    TypeSynonymInstances
+    ViewPatterns
+    OverloadedRecordDot
+    QualifiedDo
+
+  default-language:   Haskell2010
+
+library
+  import:          common-lang
+
+  exposed-modules:
+    Profila
+    Types
+    Utils
+
+  build-depends:
+    , plutarch
+    , plutus-ledger-api
+
+  hs-source-dirs:  src
+
+library pprelude
+  default-language: Haskell2010
+  build-depends:
+    , base
+    , plutarch
+
+  exposed-modules:  PPrelude
+  hs-source-dirs:   src
+
+library script-serialize
+  default-language: Haskell2010
+  build-depends:
+    , aeson
+    , aeson-pretty
+    , base
+    , base16-bytestring
+    , bytestring
+    , cardano-binary
+    , plutus-ledger-api
+    , serialise
+    , text
+
+  exposed-modules:  Scripts.V1.Serialize
+  hs-source-dirs:   src
+
+executable profila-exe
+  import:         common-lang
+  main-is:        Main.hs
+  build-depends:
+    , profila
+    , script-serialize
+
+  hs-source-dirs: app
+  ghc-options:    -threaded -rtsopts -with-rtsopts=-N
+
+test-suite profila-test
+  import:         common-lang
+  type:           exitcode-stdio-1.0
+  main-is:        Spec.hs
+  build-depends:
+    , plutarch
+    , profila
+    , QuickCheck
+    , quickcheck-instances
+    , tasty
+    , tasty-quickcheck
+
+  hs-source-dirs: test

@@ -1,0 +1,8 @@
+cradle:
+  cabal:
+    - path: "./src"
+      component: "lib:profila"
+    - path: "./src/scripts"
+      component: "lib:script-serialize"
+    - path: "./app"
+      component: "exe:profila-exe"
