@@ -18,7 +18,7 @@ Cardano Catalyst funded projects - documentation, project management &amp; code
 
 ## Description
 
-Dedicated for managing RFWs and RFCs of Catalyst Funded projects. 
+Dedicated for managing documentation, RFWs/RFCs, and code of Catalyst Funded projects. 
 
 ## Owner
 
