@@ -1,4 +1,3 @@
-# Catalyst
 <h1 align="center">
   <br>
   <a href="http://profila.com"><img src="https://github.com/Profila-Platform/Housekeeping/blob/main/Assets/Profila_Logo_Icon_Only.png" alt="Profila" width="200"></a>
