@@ -22,3 +22,7 @@ Currently the Wallet Api is open - we might consider to secure the API in a late
 General idea is that we encypt the metadata with synchronous encryption, which will be added to the blockchain.
 
 The encryptionkey we used for synchronous encryption will be then send to each involved party in asychronous encrypted way. So each an every party needs a private/public keypair.
+
+##Demonstration 
+
+https://www.youtube.com/watch?v=D7IKZm_R9Y4
