@@ -23,6 +23,6 @@ General idea is that we encypt the metadata with synchronous encryption, which w
 
 The encryptionkey we used for synchronous encryption will be then send to each involved party in asychronous encrypted way. So each an every party needs a private/public keypair.
 
-##Demonstration 
+## Demonstration 
 
 https://www.youtube.com/watch?v=D7IKZm_R9Y4
