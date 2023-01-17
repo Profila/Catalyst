@@ -9,7 +9,7 @@
 <p align="center">
   <a href="#description">Description</a> •
   <a href="#owner">Owner</a> •
-  <a href="#proposals">Proposals</a> •
+  <a href="#proposals">Funded Proposals</a> •
   <a href="#integrations">Integrations</a> •
   <a href="#docs">Docs</a>
 </p>
@@ -23,7 +23,7 @@ Dedicated for managing documentation, RFWs/RFCs, and code of Catalyst Funded pro
 
 - [@ProfilaMitchell](https://github.com/ProfilaMitchell)
 
-## Proposals 
+## Proposals
 
 <h4>Fund 5<h4/>
 
