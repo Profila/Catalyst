@@ -33,7 +33,7 @@ Dedicated for managing documentation, RFWs/RFCs, and code of Catalyst Funded pro
 
 - [User registration and login via DID with ATALA Prism](https://cardano.ideascale.com/c/idea/367840)
 - [NFT for customer feedback/content via Moments](https://cardano.ideascale.com/c/idea/368122)
-- [Control / monetiza your data through NFTs](https://cardano.ideascale.com/c/idea/366908)
+- [Control / monetize your data through NFTs](https://cardano.ideascale.com/c/idea/366908)
 
 <h4>Fund 7<h4/>
 
