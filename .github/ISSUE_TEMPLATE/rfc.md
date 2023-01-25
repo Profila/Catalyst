@@ -17,9 +17,6 @@ assignees: ''
 ---
 
 ---
-name: RFC
-about: A Request for Comments
----
 
 <h2 id="table-of-contents">Table of Contents</h2>
 
