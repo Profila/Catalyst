@@ -43,7 +43,7 @@ Dedicated for managing documentation, RFWs/RFCs, and code of Catalyst Funded pro
 
 - [Anonymity & Data Control - Token integration as utility - Part 2](https://cardano.ideascale.com/c/idea/397951)
 - [Company Privacy Ledger](https://cardano.ideascale.com/c/idea/398088)
-- [Integration of PRISM's DID into B2C layer via SDK development](https://cardano.ideascale.com/c/idea/397983)
+- [DSR validation in the blockchain](https://cardano.ideascale.com/c/idea/62046)
 - [Sharing of datasets via DID through PRISM](https://cardano.ideascale.com/c/idea/397971)
 
 <h4>Fund 9<h4/>
